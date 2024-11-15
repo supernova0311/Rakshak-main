@@ -1,0 +1,124 @@
+<%- include ('partials/header.ejs')%>
+
+    <div class="stage">
+        <div class="left-stage"></div>
+        <div class="center-stage">
+            <div class="content-area">
+                <!-- <div class="init">init</div> -->
+                <h2 style="text-align:center; font-size : 40px; margin : 21px; color: #483b20;font-family: system-ui;">Complaint Details</h2>
+                <form action="/posting" enctype="multipart/form-data" class="product-form" id="product-form-id"
+                    method="POST">
+                    <div class="form-group">
+                        <!-- jhii -->
+                        <div class="imageArea">
+                            <button class="img-left" style="color:#483b20">left</button>
+                            <img src="/images/womenSafety.jpg" alt="img" class="productImg">
+                            <button class="del-img" style="color:#483b20">delete</button>
+                            <button class="img-right" style="color:#483b20" style="color:#483b20">right</button>
+                            <span class="img-nums"><span class="img-index">0</span> of <span
+                                    class="img-tot">0</span></span>
+                        </div>
+                        <br>
+                        <label for="img" class="label-group add-img" style="color: white;
+                        background: #ab1f1fb8;
+                    " > Add Image </label>
+                        
+                        <input type="file" class="image" name="files" multiple id="img"  style = "margin: 18px;">
+                        <!-- <button  class="img-btns"> delete current image </button> -->
+
+                    </div>
+
+
+                    <!-- <div class="form-group">
+                        <div class="imageArea">
+                            <img src="/images/nightsky.jpg" alt="img" class="productImg">
+                        </div>
+                        <br>
+                        <label for="" class="label-group">Image :</label>
+                        <input type="file" class="image" name="productImage" multiple id="img">
+
+                    </div> -->
+
+
+
+                    <div class="form-group" style="margin-top: 70px;">
+                        <label for="" class="label-group" style="color:#483b20;
+                        font-family: fantasy;" >Name :</label>
+                        <input type="text" class="inputText" name="name" placeholder="Name" />
+
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="label-group" style="color:#483b20;
+                        font-family: fantasy;">Date of complaint :</label>
+                        <input type="date" class="inputText" name="date" required placeholder="Date" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="types" class="label-group" style="color:#483b20;
+                        font-family: fantasy;">Department :</label>
+                        <select name="department" id="types" form="product-form-id" class="typeList">
+                            <option value="DepartmentA">N/A</option>
+                            <option value="DepartmentA">DepartmentA</option>
+                            <option value="DepartmentB">DepartmentB</option>
+                            <option value="DepartmentC">DepartmentC</option>
+                            <option value="DepartmentD">DepartmentD</option>
+                            <option value="DepartmentE">DepartmentE</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+                        <div><label for="" class="label-group" style="color:#483b20;
+                            font-family: fantasy;">The person(s) involved in this complaint are (
+                                separated with comma (',')):</label></div>
+                        <textarea style = "margin: 18px 9px;"name="accused" id="" cols="30" rows="5" class="inputText textArea"
+                            placeholder="Accused" form="product-form-id"></textarea>
+
+                    </div>
+
+                    <div class="form-group">
+                        <div><label for="" class="label-group" style="color:#483b20;
+                            font-family: fantasy;">Complaint Description :</label></div>
+                        <textarea style = "margin: 18px 9px;"name="description" id="" cols="30" rows="5" class="inputText textArea"
+                            placeholder="Description" form="product-form-id"></textarea>
+
+                    </div>
+                    <h2 style="color : #483b20">Contact Details</h2>
+
+                    <div class="form-group">
+                        <label for="" class="label-group" style="color:#483b20;
+                        font-family: fantasy;">Phone No. :</label>
+                        <input type="text" class="inputText" name="authorPhoneNo" placeholder='Phone No.'
+                          style="color: #483b20;"  value=<%=user.phone%>>
+
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="label-group" style="color:#483b20;
+                        font-family: fantasy;">Email id :</label>
+                        <input type="text" class="inputText" name="authorEmail" placeholder='email'
+                        style="color: #483b20;"  value=<%=user.email%>>
+
+                    </div>
+                    <div class="form-group">
+                        <!-- <input type="submit" class="submit-btn"> -->
+                        <button class="submit-btn" style="color: white;
+                        background: #ab1f1fb8;
+                    border : none">Post</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <div class="right-stage"></div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="/js/fileComplaint.js"></script>
+    <script src="/js/style.js"></script>
+    </body>
+
+    </html>

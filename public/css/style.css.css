@@ -1,0 +1,92 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    color: #d1b5a1;
+}
+body{
+    background-color: white;
+    font-family: system-ui;
+    background-image: url('/images/trt.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.navbar{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* background-color: teal; */
+    
+	/* background: #FF416C;
+	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+	background: linear-gradient(to right, #FF4B2B, #FF416C);
+    background: linear-gradient(198deg, #cfc768, #ffe668); */
+    background-color: #000000c2;
+    height: 10vh;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    font-size: 20px;
+    z-index: 10;
+}
+.icon{
+    position: absolute;
+    left: 10px;
+    width: 7%;
+    height: 75%;
+    /* border: 1px solid black; */
+    margin: auto 15px;
+}
+.icon a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.iconImg{
+    height: 100%;
+    width: 100%;
+}
+.emergency{
+    background: none;
+    font-size: 100%;
+    border: none;
+    cursor: pointer;
+    color : #d56200;
+    font-weight: 700;
+}
+.navlist{
+    position: absolute;
+    right: 10px;
+    margin: auto;
+}
+.navlist ul{
+    list-style: none;
+    display: flex;
+}
+
+.navlist ul li a{
+    /* padding: 5px; */
+    /* border: 1px solid black; */
+    margin: 5px 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    font-weight: 200;
+    font-size: 18px;
+    font-family: initial;
+    
+
+}
+.navlist ul li a:hover{
+    text-decoration: underline;
+}
+.stage{
+    
+    display: flex;
+    justify-content: space-evenly;
+    /* height: 190vh;
+    overflow: hidden; */
+    /* border: 1px solid black; */
+    /* background: white; */
+}

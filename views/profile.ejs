@@ -1,0 +1,183 @@
+<link rel="stylesheet" href="/css/profile.css">
+    <%- include ('partials/header.ejs') %>
+    <div class="edito">
+        <div class="left-stage-editor"></div>
+        <div class="right-stage-editor"></div>
+        <form action="/updateUserProfile"  enctype="multipart/form-data" class="editi" method="POST">
+            <div class="user-profile-editor">
+                <img class="cover-pic-editor" src= <%=user.coverPic == "" ? "/images/nightsky.jpg" : "/user_images/" + user._id + "/coverPic/" + user.coverPic %> >
+                <img  class="display-pic-editor" src= <%=user.displayPic == "" ? "/images/nightsky.jpg" : "/user_images/" + user._id + "/displayPic/" + user.displayPic %>>
+               
+                <label for="edit-cover-pic" class="edit-cover-pic-label" >edit</label>
+                <input type="file" class="edit-cover-pic" id="edit-cover-pic" name="coverPic"> 
+
+                <label for="edit-display-pic" class="edit-display-pic-label">edit</label>
+                <input type="file" class="edit-display-pic" id="edit-display-pic" name="displayPic">
+
+                <div class="name-editor form-group">
+                    <input type="text" style="color: brown;" class="input-name inputText" placeholder="Name" name="name" class="input-name" value=<%= user.name %> >
+                </div>
+                
+                <div class="bio-editor form-group">
+                    <input type="text" style="color: brown;" class="inputText" placeholder="Add Bio" name="bio" value=<%= user.bio %> >
+                </div>
+            </div>
+
+            <div class="user-details-editor">
+
+                <!-- <div class="form-group">
+                    <label for="" class="label-group">College:</label>
+                    <input type="text" class="inputText" name="college" placeholder='College' value=<%=user.college%>>
+
+                </div> -->
+                <div class="form-group">
+                    <label for="" class="label-group" style="color:brown">Department:</label>
+                    <input type="text" class="inputText" name="department" placeholder='Department' value=<%=user.department%>>
+
+                </div>
+                <div class="form-group">
+                    <label for="" class="label-group" style="color:brown">Email : </label>
+                    <input type="text" class="inputText" name="email" placeholder='Email'  style="color:brown"value=<%=user.email%>>
+
+                </div>
+                <div class="form-group">
+                    <label for="" class="label-group" style="color:brown">Contact No.:</label>
+                    <input type="text" class="inputText" name="phone"  style="color:brown" placeholder='Contact No.' value=<%=user.phone%>>
+
+                </div>
+                <div class="form-group">
+                    <label for="" class="label-group" style="color:brown">Mail No. 1:</label>
+                    <input type="text" class="inputText" name="mail_1" placeholder='Mail No. 1' value=<%=user.contactList[0]%>>
+
+                </div>
+                <div class="form-group">
+                    <label for="" class="label-group" style="color:brown">Mail No. 2:</label>
+                    <input type="text" class="inputText" name="mail_2" placeholder='Mail No. 2' value=<%=user.contactList[1]%>>
+
+                </div>
+                <div class="form-group">
+                    <label for="" class="label-group" style="color:brown">Mail No. 3:</label>
+                    <input type="text" class="inputText" name="mail_3" placeholder='Mail No. 3' value=<%=user.contactList[2]%>>
+
+                </div>
+                <div class="form-group">
+                    <label for="" class="label-group" style="color:brown">Mail No. 4:</label>
+                    <input type="text" class="inputText" name="mail_4" placeholder='Mail No. 4' value=<%=user.contactList[3]%>>
+
+                </div>
+                
+                <div class="form-group">
+                    <label for="" class="label-group" style="color:brown">Mail No. 5:</label>
+                    <input type="text" class="inputText" name="mail_5" placeholder='Mail No. 5' value=<%=user.contactList[4]%>>
+
+                </div>
+                <div class="form-group">
+                    <label for="" class="label-group" style="color:brown">Mail No. 6:</label>
+                    <input type="text" class="inputText" name="mail_6" placeholder='Mail No. 6' value=<%=user.contactList[5]%>>
+
+                </div>
+                <div class="form-group">
+                    <label for="" class="label-group" style="color:brown">Mail No. 7:</label>
+                    <input type="text" class="inputText" name="mail_7" placeholder='Mail No. 7' value=<%=user.contactList[6]%>>
+
+                </div>
+                <div class="form-group">
+                    <label for="" class="label-group" style="color:brown">Mail No. 8:</label>
+                    <input type="text" class="inputText" name="mail_8" placeholder='Mail No. 8' value=<%=user.contactList[7]%>>
+
+                </div>
+                <div class="form-group">
+                    <label for="" class="label-group" style="color:brown">Mail No. 9:</label>
+                    <input type="text" class="inputText" name="mail_9" placeholder='Mail No. 9' value=<%=user.contactList[8]%>>
+
+                </div>
+                <div class="form-group">
+                    <label for="" class="label-group" style="color:brown">Mail No. 10:</label>
+                    <input type="text" class="inputText" name="mail_10" placeholder='Mail No. 10' value=<%=user.contactList[9]%>>
+
+                </div>
+                
+                
+                <!-- <div class="div-group">
+                    <label for="" class="label-group">Branch : <%= user.name %></label>
+                </div>
+                <div class="div-group">
+                    <label for="" class="label-group">Email : <%= user.email %></label>
+                </div>
+                <div class="div-group">
+                    <label for="" class="label-group">Contact No.: <%= user.phone %></label>
+                </div> -->
+            </div>
+            <button class="cancel-edit editor-btns" style="color: white;background-color: #6c3232;" >cancel</button>
+            <input type="submit" class="save-edit editor-btns" style="color: white;background-color: #6c3232;">
+            <!-- <button class="save-edit editor-btns" >save</button> -->
+               <div style="margin-bottom:30px ;"></div>
+        </form>
+        
+    </div>
+    
+    <div class="stage">
+        <div class="left-stage"></div>
+        <div class="center-stage">
+
+            <div class="user-profile">
+                <img class="cover-pic" src= <%=user.coverPic == "" ? "/images/nightsky.jpg" : "/user_images/" + user._id + "/coverPic/" + user.coverPic %> >
+                <img  class="display-pic" src= <%=user.displayPic == "" ? "/images/nightsky.jpg" : "/user_images/" + user._id + "/displayPic/" + user.displayPic %>>
+                <!-- <label for="edit-cover-pic" class="edit-cover-pic-label">edit</label>
+                <input type="file" class="edit-cover-pic" id="edit-cover-pic"> -->
+                <!-- <label for="edit-display-pic" class="edit-display-pic-label">edit</label>
+                <input type="file" class="edit-display-pic" id="edit-display-pic"> -->
+
+                <div class="name">
+                    <%= user.name %>
+                </div>
+                <div class="bio"><%= user.bio %></div>
+            </div>
+
+            <div class="user-details">
+
+                <!-- <div class="div-group">
+                    <label for="" class="label-group">College : <%= user.college %></label>
+                </div> -->
+                <div class="div-group">
+                    <label for="" class="label-group" style="    color: #6c3232;
+                    font-weight: 700;">Department : <%= user.department %></label>
+                </div>
+                <div class="div-group">
+                    <label for="" class="label-group"style="    color: #6c3232;
+                    font-weight: 700;">Email : <%= user.email %></label>
+                </div>
+                <div class="div-group">
+                    <label for="" class="label-group"style="    color: #6c3232;
+                    font-weight: 700;">Contact No.: <%= user.phone %></label>
+                </div>
+                <div class="div-group">
+                    <label for="" class="label-group"style="    color: #6c3232;
+                    font-weight: 700;">Mail List  :
+                        <div class="contactList">
+                        <% user.contactList.forEach(mail =>{ %>
+                             <p><%=mail%></p>
+                        <% }); %>
+                        </div>
+                    </label>
+                </div>
+            </div>
+            <button class="edit-user-details" id="edit-user-details">Edit Profile</button>
+
+            <hr>
+
+            <%- include ('partials/content.ejs')%>
+
+        </div>
+        <div class="right-stage"></div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="/js/profile.js"></script>
+    <script src="/js/style.js"></script>
+</body>
+
+</html>
