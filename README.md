@@ -1,4 +1,4 @@
-# Rakshak
+
 This is full stack web application. The main idea of this application is provide ease of access to lodge a complaint in case of sexual harassment at workplace. Know the real time status of the complaint filed . Send "SOS e-mails" to added contacts with "LIVE LOCATION" of the user.
 
 ![COMPLAINTS](https://user-images.githubusercontent.com/56023805/180623579-8607f132-05be-4084-a86a-5ec9c6baee84.png)
